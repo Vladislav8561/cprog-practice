@@ -3,24 +3,6 @@
 
 using namespace std;
 
-int factorial(int value) {
-	int result = value;
-
-	for (int i = value - 1; i > 0; i--) {
-		result *= i;
-	}
-
-	return result;
-}
-
-int recursiveFactorial(int value) {
-	if (value == 1) {
-		return 1;
-	}
-
-	return value * recursiveFactorial(value - 1);
-}
-
 void merge(int* array1, int len1, int* array2, int len2, int* result) 
 {
 	int i = 0, j = 0, k = 0;
@@ -55,8 +37,10 @@ void merge(int* array1, int len1, int* array2, int len2, int* result)
 	}
 }
 
-void mergeSort(int* array, int length) {
-	if (length <= 1) {
+void mergeSort(int* array, int length) 
+{
+	if (length <= 1) 
+	{
 		return;
 	}
 
@@ -74,7 +58,8 @@ void mergeSort(int* array, int length) {
 	delete[] result;
 }
 
-int main(void) {
+int main(void) 
+{
 	int size = 0;
 
 	cout << ">> ";
@@ -83,14 +68,16 @@ int main(void) {
 	int* array = new int[size];
 
 	cout << ">> ";
-	for (int i = 0; i < size; i++) {
+	for (int i = 0; i < size; i++) 
+	{
 		cin >> array[i];
 	}
 
 	mergeSort(array, size);
 
 	cout << ">> ";
-	for (int i = 0; i < size; i++) {
+	for (int i = 0; i < size; i++) 
+	{
 		cout << array[i] << " ";
 	}
 
